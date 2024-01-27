@@ -1,15 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
-    display: ${props => props.display};
+import { Box } from '../Box'
+
+const Container = styled(Box)`
+    display: flex;
     justify-content: ${props => props.justifyContent};
     align-items: ${props => props.alignItems};
-    padding: ${props => props.padding};
-    width: ${props => props.width};
+    flex-direction: ${props => props.flexDirection};
+    gap: ${props => props.gap};
 `
 
-export const Box = ({ children, ...props }) => {
+export const FlexBox = ({ children, ...props }) => {
 
     return (
         <Container {...props}>

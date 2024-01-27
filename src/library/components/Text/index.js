@@ -18,8 +18,10 @@ const TextH3 = styled.h3`
 `
 
 const TextP = styled.p`
-    weight: ${props => props.weight || 400};
+    margin: 0;
+    font-weight: ${props => props.weight || 400};
     font-size: ${props => props.fontSize || '12px'};
+    white-space: pre-line;
 `
 
 export const Text = ({ children, ...props }) => {

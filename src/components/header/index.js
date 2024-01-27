@@ -1,35 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Box, Text} from '../../library/components'
+import { FlexBox, Text } from '../../library/components'
 
 
-const HeaderContainer = styled(Box)`
-    padding: 10px;
-    min-height: 25px;
+const HeaderContainer = styled(FlexBox)`
+    width: 100%;
+    color: white;
+    padding: 50px;
+    border: 1px olid white;
 
 `
-const NameContainer = styled(Box)`
-        flex-grow: 1;
-    `
-
-const NavigationContainer = styled(Box)`
-        flex-grow: 1;
-    `
+const NameContainer = styled.div`
+    padding-left: 40px;
+`
+const NavigationContainer = styled(FlexBox)`
+    width: 20%;
+    max-width: 550px;
+    padding-right: 40px;
+`
 
 export const Header = () => {
 
     // link the others
     return (
-        <HeaderContainer display="flex" justifyContent="space-between" alignItems="center">
-            <NameContainer display="flex" justifyContent="flex-start" alignItems="flex-end">
+        <HeaderContainer justifyContent="space-between" alignItems="center">
+            <NameContainer>
                 <Text>alex hsieh</Text>
             </NameContainer>
-            <NavigationContainer display="flex" justifyContent="space-between" alignItems="flex-end">
-                <Text>home</Text>
+            <NavigationContainer justifyContent="space-between" alignItems="flex-end">
                 <Text>about</Text>
                 <Text>work</Text>
-                <Text>contact</Text>
+                <Text>projects</Text>
             </NavigationContainer>
         </HeaderContainer>
     )
