@@ -3,36 +3,27 @@ import styled from 'styled-components'
 
 import { FlexBox, Text } from '../../library/components'
 
-
 const HeaderContainer = styled(FlexBox)`
     width: 100%;
     color: white;
-    padding: 50px;
-    border: 1px olid white;
+    margin-top: 50px;
 
 `
 const NameContainer = styled.div`
-    padding-left: 40px;
+    margin-left: 40px;
 `
-const NavigationContainer = styled(FlexBox)`
-    width: 20%;
-    max-width: 550px;
-    padding-right: 40px;
+
+const WideText = styled(Text)`
+    letter-spacing: 0.2em;
 `
 
 export const Header = () => {
 
-    // link the others
     return (
-        <HeaderContainer justifyContent="space-between" alignItems="center">
+        <HeaderContainer direction="row" justifyContent="flex-start" alignItems="center">
             <NameContainer>
-                <Text>alex hsieh</Text>
+                <WideText>alex hsieh</WideText>
             </NameContainer>
-            <NavigationContainer justifyContent="space-between" alignItems="flex-end">
-                <Text>about</Text>
-                <Text>work</Text>
-                <Text>projects</Text>
-            </NavigationContainer>
         </HeaderContainer>
     )
 }
