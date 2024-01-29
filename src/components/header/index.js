@@ -14,7 +14,7 @@ const NameContainer = styled.div`
 `
 
 const WideText = styled(Text)`
-    letter-spacing: 0.2em;
+    letter-spacing: 0.5em;
 `
 
 export const Header = () => {
@@ -22,7 +22,7 @@ export const Header = () => {
     return (
         <HeaderContainer direction="row" justifyContent="flex-start" alignItems="center">
             <NameContainer>
-                <WideText>alex hsieh</WideText>
+                <WideText>hello</WideText>
             </NameContainer>
         </HeaderContainer>
     )
