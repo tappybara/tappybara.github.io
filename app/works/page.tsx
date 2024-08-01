@@ -3,6 +3,7 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WorkCard from "@/components/WorkCard";
 
 import Williams from "../../assets/images/williams.png";
 
@@ -34,6 +35,7 @@ export default function Home() {
                 <div className="flex text-gray-400 justify-center">07.24</div>
               </div>
             </div>
+            <WorkCard imgSrc="../../assets/images/williams.png" description="bub" date="03.25" />
           </div>
           <div className="flex col-span-6 row-start-5 row-span-3 bg-gradient-to-t from-[#E8E5E5] via-[#E2E2E2] via-25% to-slate to-40%"></div>
           <div className="flex col-span-6 row-start-8 row-span-3 bg-gradient-to-t from-[#E8E5E5] via-[#E2E2E2] via-25% to-slate to-40%"></div>
