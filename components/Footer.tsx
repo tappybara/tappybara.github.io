@@ -1,17 +1,29 @@
-import React, { FC } from "react";
-import Link from 'next/link'
+import React, { FC } from 'react';
+import Link from 'next/link';
 
-const Footer: FC = () => {
-  return (
-      <div className="flex flex-col col-start-2 col-span-4 row-start-6 p-4 justify-end">
-        <div className="flex justify-between">
-          <Link href="/">home</Link>
-          <Link href="/about">about</Link>
-          <Link href="/works">works</Link>
-          <Link href="/contact">contact</Link>
+type Props = {
+    colour?: string;
+};
+
+const Footer: FC<Props> = ({ colour = 'black' }) => {
+    return (
+        <div className="flex flex-col col-start-2 col-span-4 row-start-6 p-4 justify-end z-10">
+            <div className="flex justify-between">
+                <Link className={`text-${colour}`} href="/">
+                    home
+                </Link>
+                <Link className={`text-${colour}`} href="/about">
+                    about
+                </Link>
+                <Link className={`text-${colour}`} href="/works">
+                    works
+                </Link>
+                <Link className={`text-${colour}`} href="/contact">
+                    contact
+                </Link>
+            </div>
         </div>
-      </div>
-  );
+    );
 };
 
 export default Footer;
