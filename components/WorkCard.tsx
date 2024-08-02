@@ -16,7 +16,7 @@ const WorkCard: FC<Props> = ({
     imgHeight = 0,
     imgAlt,
     description,
-    date
+    date,
 }) => {
     // const image = require(imgSrc);
     return (

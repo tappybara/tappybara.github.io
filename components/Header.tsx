@@ -8,7 +8,7 @@ type Props = {
 const ZK = Zen_Kurenaido({
     style: ['normal'],
     weight: ['400'],
-    subsets: ['latin']
+    subsets: ['latin'],
 });
 
 const Header: FC<Props> = ({ colour = 'black' }) => {
