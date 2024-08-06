@@ -18,7 +18,7 @@ export default function Home() {
                     <div className="flex justify-center items-center row-start-2 row-end-6 col-span-6 overflow-hidden z-10">
                         <div className="flex flex-col justify-center items-center">
                             <div className="text-center tracking-wider text-white">
-                                alex hsieh
+                                welcome, alex hsieh
                             </div>
                         </div>
                     </div>
