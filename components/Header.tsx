@@ -15,11 +15,11 @@ const Header: FC<Props> = ({ colour = 'black' }) => {
     return (
         <div className="flex justify-center col-span-6 p-4 z-10 select-none">
             <div
-                className={`flex flex-col justify-center items-center tracking-wider text-lg text-${colour} ${ZK.className}`}
+                className={`flex flex-col justify-start items-center tracking-wider text-lg text-${colour} ${ZK.className}`}
             >
                 <span>・謝・</span>
                 <span
-                    className={`w-4 h-2 rounded-t-none rounded-b-full border-t-0 border-l-2 border-r-2 border-b-2 border-${'colour'}`}
+                    className={`w-4 h-2 rounded-t-none rounded-b-full border-t-0 border-l-2 border-r-2 border-b-2 border-${colour}`}
                 />
             </div>
         </div>
