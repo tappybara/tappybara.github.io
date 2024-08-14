@@ -13,7 +13,7 @@ const ZK = Zen_Kurenaido({
 
 const Header: FC<Props> = ({ colour = 'black' }) => {
     return (
-        <div className="flex justify-center col-span-12 p-4 z-10 select-none">
+        <div className="flex justify-center w-full lg:w-3/6 p-4 z-10 select-none">
             <div
                 className={`flex flex-col justify-start items-center tracking-wider text-lg text-${colour} ${ZK.className}`}
             >

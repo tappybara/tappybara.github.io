@@ -7,28 +7,19 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 import Earth from '@/components/Earth';
 import Layout from '@/components/Layout';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 export default function Home() {
     return (
         <Layout>
-            <div className="flex w-3/6 min-h-screen max-h-screen ">
-                <div className="grid w-full grid-cols-12 grid-rows-12 gap-5">
-                    <Header />
-                    <div className="flex justify-center items-center col-span-12 row-start-4 row-end-10">
-                        <Canvas>
-                            <Suspense fallback={null}>
-                                <Earth scale={[2.5, 2.5, 2.5]} />
-                            </Suspense>
-                        </Canvas>
-                    </div>
-                    <Footer />
+            <div className="flex w-full">
+                <div className="flex flex-col justify-center items-center min-h-full w-3/6">
+                    <Canvas>
+                        <Suspense fallback={null}>
+                            <Earth scale={[2.5, 2.5, 2.5]} />
+                        </Suspense>
+                    </Canvas>
                 </div>
-            </div>
-
-            <div className="flex justify-center items-center w-3/6">
-                <div className="flex flex-col col-span-6 gap-5">
+                <div className="flex flex-col justify-center items-center min-h-full w-3/6 gap-3">
                     <span>let&apos;s connect</span>
                     <div className="flex flex-col gap-1">
                         <a
