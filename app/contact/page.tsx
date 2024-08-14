@@ -13,10 +13,10 @@ import Footer from '@/components/Footer';
 export default function Home() {
     return (
         <Layout>
-            <div className="flex w-3/6 min-h-screen ">
-                <div className="grid w-full grid-cols-6 grid-rows-6 gap-5">
+            <div className="flex w-3/6 min-h-screen max-h-screen ">
+                <div className="grid w-full grid-cols-12 grid-rows-12 gap-5">
                     <Header />
-                    <div className="flex h-full justify-center items-center col-span-6 row-start-2 row-end-6">
+                    <div className="flex justify-center items-center col-span-12 row-start-4 row-end-10">
                         <Canvas>
                             <Suspense fallback={null}>
                                 <Earth scale={[2.5, 2.5, 2.5]} />

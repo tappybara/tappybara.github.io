@@ -11,9 +11,9 @@ export default function Home() {
     return (
         <Layout>
             <div className="flex w-3/6 h-screen ">
-                <div className="grid w-full grid-cols-6 grid-rows-6 gap-5">
+                <div className="grid w-full grid-cols-12 grid-rows-12 gap-5">
                     <Header />
-                    <div className="flex justify-center items-center col-span-6 row-start-2 row-span-4">
+                    <div className="flex justify-center items-center col-span-12 row-start-5 row-span-4">
                         <div className="flex flex-col justify-start items-start">
                             <div className="flex gap-1 items-center">
                                 <Folder size={16} />
@@ -45,7 +45,7 @@ export default function Home() {
                     <div className="flex items-end justify-evenly pb-3 col-span-6 row-start-5 row-span-3 bg-gradient-to-t from-[#E8E7E7] via-[#ECECEC] via-20% to-slate to-30%">
                         <WorkCard
                             imgSrc="/images/williams.png"
-                            imgWidth={150}
+                            imgWidth={75}
                             imgAlt="williams"
                             description="porfolio"
                             date="03.25"

@@ -1,4 +1,7 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 import { ChevronsDown, CircleUserRound, Gamepad2, Laptop } from 'lucide-react';
 
@@ -7,31 +10,60 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 import AboutImage from '../../public/images/about.jpg';
+import Alex from '../../public/images/alex.jpg';
+import { SyntheticEvent } from 'react';
+
+const MAX_HEIGHT = document.documentElement.scrollHeight;
 
 export default function Home() {
+    const [showCollage, setShowCollage] = useState<boolean>(false);
+
+    const handleScroll = (e: SyntheticEvent) => {
+        const target = e.target as HTMLTextAreaElement;
+        const curr = target.scrollTop > MAX_HEIGHT / 2;
+
+        if (curr !== showCollage) {
+            setShowCollage(curr);
+        }
+    };
     return (
         <Layout>
             <div className="flex w-3/6 h-screen ">
-                <div className="grid w-full grid-cols-6 grid-rows-6 gap-5">
+                <div className="grid w-full grid-cols-12 grid-rows-12 gap-5">
                     <Header />
-                    <div className="flex relative col-start-2 col-span-4 row-start-3 row-span-2 overflow-hidden">
-                        <Image
-                            src={AboutImage}
-                            alt="Picture of Hina"
-                            style={{ objectFit: 'cover' }}
-                            fill
-                        />
-                    </div>
+                    {!showCollage ? (
+                        <div className="flex relative col-start-2 2xl:col-start-4 col-span-10 2xl:col-span-6 row-start-5 row-span-4 2xl:row-start-4 2xl:row-span-6 overflow-hidden">
+                            <Image
+                                src={AboutImage}
+                                alt="Picture of Hina"
+                                style={{ objectFit: 'cover' }}
+                                fill
+                            />
+                        </div>
+                    ) : (
+                        <div className="flex relative col-start-2 col-span-10 row-start-5 row-end-9 overflow-hidden">
+                            <Image
+                                src={Alex}
+                                alt="alex"
+                                style={{ objectFit: 'cover' }}
+                                fill
+                            />
+                            <span>minato aqua</span>
+                        </div>
+                    )}
                     <Footer />
                 </div>
             </div>
 
-            <div className="flex w-3/6 h-screen overflow-scroll">
+            <div
+                className="flex w-3/6 h-screen overflow-scroll"
+                onScroll={handleScroll}
+            >
                 <div className="grid w-full grid-cols-12 grid-rows-12 gap-5">
-                    <div className="flex flex-col col-start-5 col-span-4">
+                    <div className="flex flex-col col-start-4 2xl:col-start-4 col-span-6 2xl:col-span-6">
                         <div className="flex flex-col min-h-screen justify-center">
-                            <div className="flex flex-col gap-24 m-auto">
-                                <div className="flex flex-col gap-5">
+                            <div className="flex flex-col gap-8 m-auto">
+                                <div className="flex flex-col gap-2">
                                     <div className="flex gap-1 items-center">
                                         <CircleUserRound size={16} />
                                         <span>profile</span>
@@ -51,7 +83,7 @@ export default function Home() {
                                         </div>
                                         <span>---</span>
                                     </div>
-                                    <div className="flex flex-col gap-6">
+                                    <div className="flex flex-col gap-2">
                                         <div className="flex flex-col">
                                             <span>
                                                 Full Stack Developer based in
@@ -79,7 +111,7 @@ export default function Home() {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="flex flex-col gap-5">
+                                <div className="flex flex-col gap-1">
                                     <div className="flex gap-1 items-center">
                                         <Laptop size={16} />
                                         <span>experience</span>

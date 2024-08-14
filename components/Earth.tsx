@@ -20,7 +20,7 @@ const Earth: FC<JSX.IntrinsicElements['group']> = (props) => {
     return (
         <group {...props} dispose={null}>
             <ambientLight intensity={1.5} />
-            <directionalLight color="0xffffff" position={[1, 2, 7]} />
+            <directionalLight position={[1, 2, 7]} />
             <mesh
                 ref={earth}
                 castShadow
