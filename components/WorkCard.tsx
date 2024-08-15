@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 import { Construction } from 'lucide-react';
 
@@ -13,10 +13,10 @@ type Props = {
 };
 
 const WorkCard: FC<Props> = ({
-    imgSrc,
-    imgWidth,
-    imgHeight = 0,
-    imgAlt,
+    // imgSrc,
+    // imgWidth,
+    // imgHeight = 0,
+    // imgAlt,
     description,
     date,
 }) => {

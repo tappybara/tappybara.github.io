@@ -25,6 +25,7 @@ const Earth: FC<JSX.IntrinsicElements['group']> = (props) => {
                 ref={earth}
                 castShadow
                 receiveShadow
+                // @ts-expect-error seems to work
                 geometry={nodes.mesh1519172617.geometry}
                 material={materials.mat4}
             />
@@ -32,6 +33,7 @@ const Earth: FC<JSX.IntrinsicElements['group']> = (props) => {
                 ref={land}
                 castShadow
                 receiveShadow
+                // @ts-expect-error seems to work
                 geometry={nodes.mesh1519172617_1.geometry}
                 material={materials.mat10}
             />
