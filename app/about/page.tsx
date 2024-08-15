@@ -12,7 +12,7 @@ import Alex from '../../public/images/alex.jpg';
 export default function Home() {
     return (
         <Layout>
-            <div className="flex flex-col lg:flex-row w-full min-h-full lg:h-full lg:flex-wrap gap-24 lg:gap-0">
+            <div className="flex flex-col lg:flex-row w-full min-h-full h-full lg:h-full lg:flex-wrap gap-24 lg:gap-0">
                 <div className="grid w-full h-full min-h-full lg:w-3/6 grid-cols-12 grid-rows-12 gap-5">
                     <FadeInOnScroll className="flex flex-col lg:hidden col-start-1 col-span-12 justify-center items-center row-start-1 row-span-5">
                         <span>about me</span>
@@ -31,7 +31,7 @@ export default function Home() {
                         <ChevronsDown size={16} color="#6B7280" />
                     </FadeInOnScroll>
                 </div>
-                <div className="grid w-full h-full h-autp lg:w-3/6 grid-cols-12 grid-rows-12 gap-5">
+                <div className="grid w-full h-auto lg:w-3/6 grid-cols-12 grid-rows-12 gap-5">
                     <div className="flex justify-center items-center col-start-3 col-span-8 row-span-12">
                         <div className="flex flex-col h-full">
                             <FadeInOnScroll className="flex flex-col gap-8 my-auto">

@@ -12,14 +12,14 @@ export default function Home() {
     return (
         <Layout>
             <div className="flex w-full">
-                <div className="flex flex-col justify-center items-center min-h-full w-3/6">
+                <div className="hidden lg:flex flex-col justify-center items-center min-h-full w-3/6">
                     <Canvas>
                         <Suspense fallback={null}>
                             <Earth scale={[2.5, 2.5, 2.5]} />
                         </Suspense>
                     </Canvas>
                 </div>
-                <div className="flex flex-col justify-center items-center min-h-full w-3/6 gap-3">
+                <div className="flex flex-col justify-center items-center min-h-full w-full lg:w-3/6 gap-3">
                     <span>let&apos;s connect</span>
                     <div className="flex flex-col gap-1">
                         <a
