@@ -11,7 +11,7 @@ type Props = {
 const Layout: FC<Props> = ({ theme, children }) => {
     return (
         <main>
-            <div className="flex flex-col relative min-h-screen bg-gradient-to-r from-white from-50% to-slate to-50%">
+            <div className="flex flex-col relative min-h-screen h-auto lg:bg-gradient-to-r lg:from-white from-50% lg:to-slate to-50%">
                 <Header colour={theme} />
                 <div className="flex overflow-scroll grow h-0">{children}</div>
                 <Footer colour={theme} />
